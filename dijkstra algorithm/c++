@@ -1,5 +1,5 @@
 #include <isostream>
-namespace std;
+ using namespace std;
 #include <limits.h>
 
 #define V 9
