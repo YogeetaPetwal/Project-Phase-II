@@ -1,0 +1,51 @@
+Begin
+
+   count := 1
+
+   maxEdge := a * (a - 1) / 2     //a is number of vertices
+
+
+
+   for all vertices n of the graph, do
+
+      distance[n] := ∞
+
+      pred[n] := ?
+
+   done
+
+
+
+   distance[source] := 0
+
+   eCount := number of edges in the graph
+
+   create edge list named edgeList
+
+
+
+   while count < a, do
+
+      for k := 0 to eCount, do
+
+         if distance[edgeList[k].n] > distance[edgeList[k].m] + (cost[m,n] for edge k) distance[edgeList[k].n] > distance[edgeList[k].m] + (cost[m,n] for edge k) pred[edgeList[k].n] := edgeList[k].m
+
+      done
+
+   done
+
+
+
+   count := count + 1
+
+   for all vertices k in the graph, do
+
+      if distance[edgeList[k].n] > distance[edgeList[k].m] + (cost[m,n] for edge k),
+
+         then return true
+
+   done
+
+
+
+   return false
